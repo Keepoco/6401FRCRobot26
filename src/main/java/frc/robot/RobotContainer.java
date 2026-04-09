@@ -142,9 +142,12 @@ public class RobotContainer {
         
         //DEBUGGING RPM
         /* 
-        double slider;
-        slider = (Buttons.getThrottle() + 1.0) / 2;
-        shooter.setPercentOutput(slider);
+        shooter.setDefaultCommand(
+        shooter.run(() -> {
+            double slider = (Buttons.getThrottle() + 1.0) / 2.0;
+            shooter.setPercentOutput(slider);
+        })
+);
         */
         
         
